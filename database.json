@@ -1,0 +1,16 @@
+{
+    "123456": {
+        "miri": "X si Y",
+        "invitati": "A si B",
+        "mesaj": "Va invitam!",
+        "dataNuntii": 1635701347,
+        "acceptat": true
+    },
+    "123457": {
+        "miri": "X si Y",
+        "invitati": "C si D",
+        "mesaj": "Va invitam!",
+        "dataNuntii": 1635701347,
+        "acceptat": true
+    }
+}

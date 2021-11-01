@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <table id="invitatii"> 
+            <tr>
+                <td>Miri</td>
+                <td>Invitati</td>
+                <td>Mesaj</td>
+                <td>Data Nuntii</td>
+                <td>Acceptat</td>
+            </tr>
+        </table>
+
+        <script>
+            jQuery.ajax({
+                url: "http://localhost:3000/invitatii",
+                method: "get"
+            })
+            .done(function( data ) {
+                Object.keys(data).map((invId) => {
+                    let invitations = Object.keys(data[invId]).map(key => {
+                        return `<td>${data[invId][key]}</td>`;
+                    })
+                    
+                    console.log(invitations)
+                    jQuery('#invitatii').append(`<tr>${invitations.join('')}</tr>`)
+                })
+                
+            });
+        </script>
+    </body>
+</html>
